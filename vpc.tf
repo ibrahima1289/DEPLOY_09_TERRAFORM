@@ -1,4 +1,5 @@
-# VPC
+
+# Create a new VPC
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/18"
@@ -7,6 +8,7 @@ resource "aws_vpc" "main" {
     Name = "Main VPC"
   }
 }
+
 
 resource "aws_internet_gateway" "ig1" {
   vpc_id = aws_vpc.main.id
